@@ -1,1 +1,1 @@
-# app-configurator-masters
+# app-configurator

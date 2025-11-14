@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: app-configurator-masters
+    version: 1.0.0
+    description: Configurator Masters Application
+    team:
+      name: Firefly Software Solutions Inc
+      email: dev@getfirefly.io
+  config:
+    import: "optional:configserver:${CONFIG_SERVER_URL:https://app-firefly-config-server.dev.soon.es/}"
