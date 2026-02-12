@@ -1,6 +1,6 @@
 package com.firefly.app.configurator.web.controllers;
 
-import com.firefly.common.application.config.DomainPassthrough;
+import org.fireflyframework.application.config.DomainPassthrough;
 import org.springframework.stereotype.Component;
 
 @Component
