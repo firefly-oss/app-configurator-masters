@@ -6,5 +6,59 @@ spring:
     team:
       name: Firefly Software Solutions Inc
       email: dev@getfirefly.io
-  config:
-    import: "optional:configserver:${CONFIG_SERVER_URL:https://app-firefly-config-server.dev.soon.es/}"
+  threads:
+    virtual:
+      enabled: true
+  cloud:
+    gateway:
+      filter:
+        json-to-grpc:
+          enabled: false
+
+endpoints:
+  domain:
+    core-domain-configuration: ${ENDPOINT_DOMAIN_CONFIGURATION:http://localhost:8088}
+    configuration: ${endpoints.domain.core-domain-configuration}
+
+server:
+  address: ${SERVER_ADDRESS:localhost}
+  port: ${SERVER_PORT:8080}
+  shutdown: graceful
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true
+  health:
+    livenessState:
+      enabled: true
+    readinessState:
+      enabled: true
+    redis:
+      enabled: false
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0
+  otlp:
+    tracing:
+      endpoint: ${OTEL_ENDPOINT:http://otel-collector:4317}
+otel.traces.exporter: otlp
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  level:
+    root: INFO
+    com.firefly: DEBUG
+    org.springframework.r2dbc: DEBUG
+    org.flywaydb: DEBUG
+    org.springframework.cloud.gateway: DEBUG
+    io.opentelemetry.exporter.zipkin: DEBUG
+    org.springframework.boot.actuate.autoconfigure.tracing: DEBUG
