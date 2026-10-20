@@ -10,6 +10,7 @@
     </parent>
 
     <artifactId>app-configurator-masters-web</artifactId>
+    <name>app-configurator-masters-web</name>
 
     <properties>
         <maven.compiler.source>25</maven.compiler.source>
