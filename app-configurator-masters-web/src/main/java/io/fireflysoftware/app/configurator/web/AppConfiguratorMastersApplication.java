@@ -1,4 +1,4 @@
-package com.firefly.app.configurator.web;
+package io.fireflysoftware.app.configurator.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

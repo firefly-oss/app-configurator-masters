@@ -71,7 +71,7 @@ app-configurator-masters/
 └── app-configurator-masters-web/
     ├── pom.xml                          # Web module POM
     └── src/main/
-        ├── java/com/firefly/app/configurator/web/
+        ├── java/io/fireflysoftware/app/configurator/web/
         │   ├── AppConfiguratorMastersApplication.java  # Spring Boot entry point
         │   ├── GatewaySecurityConfig.java              # WebFlux security config
         │   └── controllers/
