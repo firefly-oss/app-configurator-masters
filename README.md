@@ -92,7 +92,7 @@ app-configurator-masters/
 
 | Variable            | Description                              | Default                                                  |
 |---------------------|------------------------------------------|----------------------------------------------------------|
-| `CONFIG_SERVER_URL` | URL of the Spring Cloud Config Server    | `https://app-firefly-config-server.dev.soon.es/`         |
+| `CONFIG_SERVER_URL` | URL of the Spring Cloud Config Server    | `https://openplatform.fireflysoftware.io/firefly-config`         |
 
 Additional configuration properties are resolved at runtime from the Config Server, including:
 

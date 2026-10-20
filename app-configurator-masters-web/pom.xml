@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.firefly</groupId>
         <artifactId>app-configurator-masters</artifactId>
-        <version>26.10.1</version>
+        <version>26.10.2</version>
     </parent>
 
     <artifactId>app-configurator-masters-web</artifactId>
@@ -38,7 +38,7 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-gateway</artifactId>
+            <artifactId>spring-cloud-starter-gateway-server-webflux</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
